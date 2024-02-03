@@ -3,10 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 import os
 
-uri = os.environ['MYSQLUSER'] + ":"
-+ os.environ['MYSQL_ROOT_PASSWORD'] + "@"
-+ os.environ['MYSQLHOST'] + ':'
-+ os.environ['MYSQLPORT']
+uri = os.environ['MYSQLUSER'] + ":" + os.environ['MYSQL_ROOT_PASSWORD'] + "@" + os.environ['MYSQLHOST'] + ':' + os.environ['MYSQLPORT']
 
 print(uri)
 
