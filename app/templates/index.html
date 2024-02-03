@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
     {% block content %}
-    <table>
-        <tr>
+
+    <ul>
             {% for user in users %}
-                <td>{{ user.name }}</td>>
+                <li> {{ user.name }} </li>
             {% endfor %}
-        </tr>
-    </table>
+    </ul>
 
     {% endblock %}
