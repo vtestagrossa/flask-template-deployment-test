@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:hGBFGg2BhFa4hbgbghEeD46AHE6b-BHb@viaduct.proxy.rlwy.net/railway'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:hGBFGg2BhFa4hbgbghEeD46AHE6b-BHb@viaduct.proxy.rlwy.net/railway'
 app.config['SQLALCHEMY_TRACK_NOTIFICATIONS'] = False
 
 db = SQLAlchemy(app)
