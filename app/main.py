@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + os.environ['MYSQLUSER'] + ':' + os.environ['MYSQL_ROOT_PASSWORD'] + '@' + os.environ['MYSQLHOST'] + ':' + os.environ['MYSQLPORT'] + '/' + os.environ['MYSQLDATABASE']
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + os.environ['MYSQLUSER'] + ':' + os.environ['MYSQL_ROOT_PASSWORD'] + '@' + os.environ['MYSQLHOST'] + ':' + os.environ['MYSQLPORT'] + '/' + os.environ['MYSQL_DATABASE']
 app.config['SQLALCHEMY_TRACK_NOTIFICATIONS'] = False
 
 db = SQLAlchemy(app)
