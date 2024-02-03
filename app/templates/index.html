@@ -1,14 +1,12 @@
 {% extends 'base.html' %}
 
     {% block content %}
-
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Test Title</h5>
-                <p class="card-text">
-                    Testing server functions.
-                </p>
-            </div>
-        </div>
+    <table>
+        <tr>
+            {% for user in users %}
+                <td>{{ user.name }}</td>>
+            {% endfor %}
+        </tr>
+    </table>
 
     {% endblock %}
