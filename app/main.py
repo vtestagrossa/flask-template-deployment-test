@@ -8,7 +8,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:hGBFGg2BhFa4hbgbghEeD46AHE
 app.config['SQLALCHEMY_TRACK_NOTIFICATIONS'] = False
 
 db = SQLAlchemy(app)
-class users(db.Model):
+class Users(db.Model):
+    __tablename__ = 'users'
     id = db.Column('user_id', db.Integer, primary_key = True)
     name = db.Column(db.String(100))
 
@@ -18,7 +19,7 @@ def __init__(self, name):
 @app.route('/')
 def index():
     title = 'Deployment Test'
-    return render_template('index.html', title=title, users = users.query.all())
+    return render_template('index.html', title=title, users = Users.query.all())
 
 if __name__ == '__main__':
     db.create_all()
